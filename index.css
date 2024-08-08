@@ -1,6 +1,6 @@
 @font-face {
     font-family:"principal";
-    src: url(fuente/NeutronsDemoRegular.ttf);
+    src: url(NeutronsDemoRegular.ttf);
 }
 
 @keyframes entrada {
