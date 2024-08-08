@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery Top</title>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Gallery Top</h1>
+    </header>
+    <main>
+        <section id="img_up">
+            <h2>Subir imagen</h2>
+            <!-- Estas son las entradas de texto que son: el titulo y el link de la imagen -->
+            <input id="entrada_titulo" class="entrada_link" type="text" placeholder="Ingresa el titulo de la imagen">
+            <input id="entrada_enlace" class="entrada_link" type="text" placeholder="Ingresa el link de la imagen que quieres subir">
+            <button id="btnsubir" onclick="añadir_img()">Subir</button>
+        </section>
+
+        <!-- Este es el espacio en el que se guardan todas las fotos -->
+        <section id="container_img"></section>
+
+
+        <!-- Esta parte se oculta o se hace visible al momento de dar click en el boton de "Detalles" o de "Cerrar" en detalles  -->
+        <div id="card_detalles" class="card_detalles">
+            <div class="detalles_card">
+                <h3 id="titulo_detalles"></h3>
+                <img id="img_detalles" src="" alt="">
+                <button class="btncerrar" onclick="cerrar_detalles()">Cerrar</button>
+            </div>
+        </div>
+
+        <!-- Esta parte se oculta igual que la anterior, solo que este es para editar la información de la imagen -->
+        <div id="editar_formulario" class="editar_formulario">
+            <div class="editar_card">
+                <h3>Editar Imagen</h3>
+                <input id="editar_titulo" type="text" placeholder="Nuevo título">
+                <input id="editar_enlace" type="text" placeholder="Nuevo enlace">
+                <button id="guardar_edicion">Guardar cambios</button>
+                <button class="btncerrar" onclick="cerrar_edicion()">Cerrar</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

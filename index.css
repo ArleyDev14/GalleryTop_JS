@@ -1,0 +1,290 @@
+@font-face {
+    font-family:"principal";
+    src: url(/fuente/NeutronsDemoRegular.ttf);
+}
+
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes salida {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+}
+
+body{
+    background-color: rgb(212, 212, 212);
+    color: black;
+    font-family:"principal";
+    letter-spacing:0.3vw;
+}
+
+header{
+    text-align: center;
+    font-size:1.5vw;
+}
+
+h2{
+    padding:0%;
+    margin:0%;
+    margin-bottom:2vw;
+}
+
+#img_up{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:0.1vw solid blue;
+    padding:2vw;
+    margin: 2vw;
+    border-radius:2vw;
+    row-gap:1vw;
+}
+
+.entrada_link{
+    width:50%;
+    border-radius:2vw;
+    border:0.2vw solid rgba(0, 0, 255, 0.638);
+    text-align: center;
+    padding:0.5vw;
+    color: rgb(0, 0, 255);
+    font-size:2vw;
+}
+
+#btnsubir{
+    width:10%;
+    border-radius:2vw;
+    border:0.2vw solid rgba(17, 0, 255, 0.735);
+    background-color: rgba(17, 0, 255, 0.735);
+    color: white;
+    text-align: center;
+    padding:0.5vw;
+    font-size:2vw;
+}
+
+#btnsubir:hover{
+    width:11%;
+    border-radius:2vw;
+    border:0.2vw solid rgba(0, 255, 26, 0.735);
+    background-color: rgba(0, 255, 26, 0.735);
+    color: white;
+    text-align: center;
+    padding:0.5vw;
+}
+
+#container_img{
+    margin:2vw;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border:0.1vw solid rgba(17, 0, 255, 0.735);
+    border-radius:2vw;
+    padding:2vw;
+    row-gap:2vw;
+    column-gap:2vw;
+}
+
+.cards{
+    border:0.1vw solid red;
+    border-radius:1vw;
+    width:10vw;
+    height:26vw;
+    padding:1vw;
+    padding-top:0vw;
+    display:grid;
+    grid-template-rows:15% 40% 40%;
+    align-items: center;
+    justify-content: center;
+    animation: entrada 0.5s ease-out;
+}
+
+.cards.salida {
+    animation: salida 0.5s ease-out forwards;
+}
+
+.img_card{
+    width:10vw;
+    height:10vw;
+    border-radius:1vw 1vw 1vw 1vw;
+    margin-top:1vw;
+}
+
+.titulo_card{
+    text-align: center;
+    font-size:1vw;
+}
+
+.btncards{
+    font-family:"principal";
+    font-size:0.8vw;
+    border-radius:1vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding:0.5vw;
+    letter-spacing:0.2vw;
+}
+
+.sectionbtn{
+    display: grid;
+    grid-template-rows: 35% 35% 35%;
+    row-gap:0.5vw;
+}
+
+.btneliminar{
+    background-color: rgba(255, 0, 0, 0.695);
+    color: white;
+    border:0.1vw solid rgba(255, 0, 0, 0.695);
+}
+
+.btneliminar:hover{
+    background-color: red;
+}
+
+.btndetalles{
+    background-color: rgba(140, 134, 134, 0.28);
+    border:0.1vw solid rgb(91, 89, 89);
+}
+
+.btndetalles:hover{
+    background-color: grey;
+
+}
+
+.card_detalles {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+    font-size:2vw;
+}
+
+.card_detalles.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.detalles_card {
+    background: rgb(212, 212, 212);
+    padding:1vw 2vw 6vw 2vw;
+    border-radius: 2vw;
+    width:20vw;
+    height:30vw;
+    display:grid;
+    grid-template-rows:10% 75% 10%;
+    row-gap:2vw;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.detalles_card img {
+    width:100%;
+    height:100%;
+    border-radius:2vw;
+    margin-bottom:1vw;
+}
+
+.btncerrar {
+    background-color: rgba(255, 0, 0, 0.695);
+    color: white;
+    border:0.1vw solid rgba(255, 0, 0, 0.695);
+    border: none;
+    cursor:pointer;
+    padding: 10px 20px;
+    font-size: 1vw;
+    border-radius:2vw;
+    width:100%;
+    height:4vw;
+}
+
+.btncerrar:hover{
+    background-color: red;
+}
+
+.editar_formulario {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+    font-size: 2vw;
+}
+
+.editar_formulario.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.editar_card {
+    background: rgb(212, 212, 212);
+    padding: 1vw 2vw 6vw 2vw;
+    border-radius: 2vw;
+    width: 20vw;
+    height: auto;
+    display: grid;
+    grid-template-rows: 15% 20% 25%;
+    row-gap: 2vw;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.editar_card h3{
+    font-size:1.5vw;
+}
+
+.editar_card input {
+    width: 100%;
+    padding: 0.5vw;
+    border-radius: 2vw;
+    border: 0.2vw solid rgba(0, 0, 255, 0.638);
+    font-size: 1.5vw;
+    color: rgb(0, 0, 255);
+    margin-bottom: 1vw;
+}
+
+#guardar_edicion{
+    background-color: rgba(0, 255, 17, 0.655);
+    color: white;
+    border:0.1vw solid rgb(0, 255, 17);
+    cursor:pointer;
+    padding: 10px 20px;
+    font-size: 1vw;
+    border-radius:2vw;
+    width:100%;
+    height:4vw;
+}
+
+#guardar_edicion:hover{
+    background-color: rgb(0, 255, 17);
+    border:0.1vw solid rgb(0, 255, 17);
+}
