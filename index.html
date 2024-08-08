@@ -15,10 +15,11 @@
         <section id="img_up">
             <h2>Subir imagen</h2>
             <!-- Estas son las entradas de texto que son: el titulo y el link de la imagen -->
-            <input id="entrada_titulo" class="entrada_link" type="text" placeholder="Ingresa el titulo de la imagen">
+            <input id="entrada_titulo" class="entrada_link" type="text" placeholder="Ingresa el titulo de la imagen" maxlength="5">
             <input id="entrada_enlace" class="entrada_link" type="text" placeholder="Ingresa el link de la imagen que quieres subir">
             <button id="btnsubir" onclick="añadir_img()">Subir</button>
         </section>
+    
 
         <!-- Este es el espacio en el que se guardan todas las fotos -->
         <section id="container_img"></section>
@@ -37,7 +38,7 @@
         <div id="editar_formulario" class="editar_formulario">
             <div class="editar_card">
                 <h3>Editar Imagen</h3>
-                <input id="editar_titulo" type="text" placeholder="Nuevo título">
+                <input id="editar_titulo" type="text" placeholder="Nuevo título" maxlength="5">
                 <input id="editar_enlace" type="text" placeholder="Nuevo enlace">
                 <button id="guardar_edicion">Guardar cambios</button>
                 <button class="btncerrar" onclick="cerrar_edicion()">Cerrar</button>
